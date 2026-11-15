@@ -1,0 +1,28 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "Landing page with Runway Dev text-to-video",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NilsSMM/Landing-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NilsSMM/Landing-Page/issues"
+  },
+  "homepage": "https://github.com/NilsSMM/Landing-Page#readme",
+  "dependencies": {
+    "@runwayml/sdk": "^4.27.0",
+    "express": "^5.3.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Powered by Runway Dev</p>
+    <h1>Turn an idea into a video.</h1>
+    <p class="lede">Describe a scene and get a short clip generated with Gen-4.5.</p>
+  </header>
+
+  <main>
+    <form id="gen-form" class="card">
+      <label for="prompt">Your scene</label>
+      <textarea id="prompt" name="prompt" rows="4" maxlength="1000" required
+        placeholder="A slow dolly shot over a sunlit wheat field at golden hour, warm light, shallow depth of field"></textarea>
+      <div class="row">
+        <label>Format
+          <select id="ratio" name="ratio">
+            <option value="1280:720">Landscape 16:9</option>
+            <option value="720:1280">Portrait 9:16</option>
+          </select>
+        </label>
+        <label>Length
+          <select id="duration" name="duration"></select>
+        </label>
+        <button id="submit" type="submit">Generate video</button>
+      </div>
+      <p id="note" class="note">Each generation spends Runway credits on the server's project.</p>
+    </form>
+
+    <section id="result" class="card result" hidden>
+      <p id="status" role="status" aria-live="polite"></p>
+      <video id="video" controls playsinline loop hidden></video>
+      <a id="download" hidden download>Download video</a>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
